@@ -9,7 +9,6 @@ import {Link} from "react-router-dom";
 const Homepage = () => {
     const filmContext = useContext(FilmsContext)
     const {loading, films, getAllFilms, comedyFilms, dramaFilms, fictionFilms, searching} = filmContext
-    // const [searching, setSearching] = useState(true)
 
     useEffect(() => {
         getAllFilms()
@@ -36,7 +35,7 @@ const Homepage = () => {
                                               rating={
                                                   item.show.rating.average
                                                       ? item.show.rating.average
-                                                      : "No rating"
+                                                      : null
                                               }
                                     />))}
                             </div>
